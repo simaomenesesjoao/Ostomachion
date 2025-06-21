@@ -1,0 +1,17 @@
+explorations
+__pycache__
+build
+CMakeFiles
+bin
+*.out*
+*.log
+*.o
+*.o.d
+*.a
+*.so
+*.pickle
+data
+node_modules
+.ipynb_checkpoints
+zold
+.vscode

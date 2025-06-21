@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+project(PolygonTest)
+#set(CMAKE_CXX_FLAGS "-O3 -g -Wall -Wextra -Wuninitialized")
+set(CMAKE_CXX_FLAGS "-O0 -g -rdynamic -Wall -Wextra -Wuninitialized")
+
+find_package(Catch2 REQUIRED)
+
+#file(GLOB TEST_FILES polygon_test.cpp intersection_algorithms_test.cpp intersection_algorithms_benchmark.cpp)
+file(GLOB TEST_FILES polygon_test.cpp)
+add_executable(test ${TEST_FILES})
+target_link_libraries(test PUBLIC  gmp gmpxx Catch2::Catch2WithMain)
+target_include_directories(test PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include)
+target_include_directories(test PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../numeric/include)
+target_include_directories(test PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../../profiling)
