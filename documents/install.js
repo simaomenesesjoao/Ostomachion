@@ -2,7 +2,6 @@
 import fs from 'fs';
 import path from 'path';
 import { marked } from 'marked';
-import katex from 'katex';
 
 // Usage: node install.js <destination_root>
 // node install.js /home/simao/projectos_pessoais/website/web/projects/ostomachion
@@ -119,4 +118,4 @@ function processFolder(currentSrcFolder, currentDestFolder, relFolder) {
 }
 
 // Run the script
-processFolder(sourceRoot, path.join(destRoot, "ostomachion"), path.join("assets", "projects", "ostomachion"));
+processFolder(sourceRoot, path.join(destRoot, "Ostomachion"), path.join("assets", "projects", "Ostomachion"));
